@@ -12,15 +12,8 @@ public class NewMob {
 
 
     public static CharactersMobs CreateNewMob(String Type, String Team, String Name, ArrayList<String> Condition, ArrayList<String> Ability, int Agility, int Intellect, int Health, int Strength, int Moral, int Respect, int Rage, int Magic, boolean Alive, boolean CanSpeak) {
-        CharactersMobs Mob = new CharactersMobs( );
-        Mob.SetType(Type);Mob.SetTeam(Team);Mob.SetName(Name);
-        Mob.SetCondition(Condition); Mob.SetAbility(Ability);
-        Mob.SetAgility(Agility);Mob.SetIntellect(Intellect);
-        Mob.SetHealth(Health);Mob.SetStrength(Strength);
-        Mob.SetMoral(Moral);Mob.SetRespect(Respect);
-        Mob.SetRage(Rage);Mob.SetMagic(Magic);
-        Mob.SetAlive(Alive);Mob.SetCanSpeak(CanSpeak);
-        return Mob;
+
+        return new CharactersMobs(Type, Team, Name, Condition, Ability, Agility, Intellect, Health, Strength, Moral, Respect, Rage, Magic, Alive, CanSpeak);
 
     }
 
@@ -28,6 +21,6 @@ public class NewMob {
         ArrayList<String> Condition = new ArrayList<>();
         ArrayList<String> Ability = new ArrayList<>();
         Condition.add("Маленький");Ability.add("Живое");
-        return CreateNewMob("Mouse",null,"Мышка",Condition,Ability,10,1,5,1,0,2,0,0,true,false);
+        return CreateNewMob("Mouser",null,"Мышка",Condition,Ability,10,1,5,1,0,2,0,0,true,false);
     }
 }

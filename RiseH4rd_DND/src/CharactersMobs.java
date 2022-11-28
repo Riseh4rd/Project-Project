@@ -6,86 +6,103 @@ public class CharactersMobs {
         private int Agility,Intellect,Health,Strength,Moral,Respect,Rage,Magic,Level;
         private  boolean Alive,CanSpeak;
 
+        public CharactersMobs(String Type, String Team, String Name, ArrayList<String> Conditions, ArrayList<String> Abilities, int Agility, int Intellect, int Health, int Strength, int Moral, int Respect, int Rage, int Magic, boolean Alive, boolean CanSpeak){
+            this.Name = Name;
+            this.Type = Type;
+            this.Team = Team;
+            this.Conditions = Conditions;
+            this.Abilities = Abilities;
+            this.Agility = Agility;
+            this.Intellect = Intellect;
+            this.Health = Health;
+            this.Strength = Strength;
+            this.Moral = Moral;
+            this.Respect = Respect;
+            this.Rage = Rage;
+            this.Magic = Magic;
+            this.Alive = Alive;
+            this.CanSpeak = CanSpeak;
+        }
 
-      public static String GetName(CharactersMobs Mob){
-         return Mob.Name;}
-      public void SetName(String Name){
-         this.Name = Name;}
+        public static String GetName(CharactersMobs Mob){
+             return Mob.Name;}
+        public void SetName(String Name){
+             this.Name = Name;}
 
-        private ArrayList<String> GetCondition(){
-            return Conditions;}
-        public void SetCondition(ArrayList<String> Condition){
-            this.Conditions = Condition;}
+        public static ArrayList<String> GetCondition(CharactersMobs Mob){
+                return Mob.Conditions;}
+            public void SetCondition(ArrayList<String> Condition){
+                this.Conditions = Condition;}
 
-        private ArrayList<String> GetAbility(){
-            return Abilities;}
-        public void SetAbility(ArrayList<String> Ability){
-            this.Abilities = Ability;}
+        public static ArrayList<String> GetAbility(CharactersMobs Mob){
+                return Mob.Abilities;}
+            public void SetAbility(ArrayList<String> Ability){
+                this.Abilities = Ability;}
 
-        private int GetAgility(){
-            return Agility;}
-        public void SetAgility(int Agility){
-            this.Agility = Agility;}
+        public static int GetAgility(CharactersMobs Mob){
+                return Mob.Agility;}
+            public void SetAgility(int Agility){
+                this.Agility = Agility;}
 
-        private int GetIntellect(){
-            return Intellect;}
-        public void SetIntellect(int Intellect){
-            this.Intellect = Intellect;}
+        public static int GetIntellect(CharactersMobs Mob){
+                return Mob.Intellect;}
+            public void SetIntellect(int Intellect){
+                this.Intellect = Intellect;}
 
-        private int GetHealth(){
-            return Health;}
-        public void SetHealth(int Health){
-            this.Health = Health;}
+        public static int GetHealth(CharactersMobs Mob){
+                return Mob.Health;}
+            public void SetHealth(int Health){
+                this.Health = Health;}
 
-        private int GetStrength(){
-            return Strength;}
-        public void SetStrength(int Strength){
-            this.Strength = Strength;}
+        public static int GetStrength(CharactersMobs Mob){
+                return Mob.Strength;}
+            public void SetStrength(int Strength){
+                this.Strength = Strength;}
 
-        private int GetMoral(){
-            return Moral;}
-        public void SetMoral(int Moral){
-            this.Moral = Moral;}
+        public static int GetMoral(CharactersMobs Mob){
+                return Mob.Moral;}
+            public void SetMoral(int Moral){
+                this.Moral = Moral;}
 
-        private int GetRespect(){
-            return Respect;}
-        public void SetRespect(int Respect){
-            this.Respect = Respect;}
+        public static int GetRespect(CharactersMobs Mob){
+                return Mob.Respect;}
+            public void SetRespect(int Respect){
+                this.Respect = Respect;}
 
-        private int GetRage(){
-            return Rage;}
-        public void SetRage(int Rage){
-            this.Rage = Rage;}
+        public static int GetRage(CharactersMobs Mob){
+                return Mob.Rage;}
+            public void SetRage(int Rage){
+                this.Rage = Rage;}
 
-        private int GetMagic(){
-            return Magic;}
-        public void SetMagic(int Magic){
-            this.Magic = Magic;}
+        public static int GetMagic(CharactersMobs Mob){
+                return Mob.Magic;}
+            public void SetMagic(int Magic){
+                this.Magic = Magic;}
 
-    private int GetLevel(){
-        return Level;}
-    public void SetLevel(int Level){
-        this.Level = Level;}
+        public static int GetLevel(CharactersMobs Mob){
+            return Mob.Level;}
+        public void SetLevel(int Level){
+            this.Level = Level;}
 
-        private boolean GetAlive(){
-            return Alive;}
-        public void SetAlive(boolean Alive){
-            this.Alive = Alive;}
+        public static boolean GetAlive(CharactersMobs Mob){
+                return Mob.Alive;}
+            public void SetAlive(boolean Alive){
+                this.Alive = Alive;}
 
-        private boolean GetCanSpeak(){
-            return CanSpeak;}
-        public void SetCanSpeak(boolean CanSpeak){
-            this.CanSpeak = CanSpeak;}
+        public static boolean GetCanSpeak(CharactersMobs Mob){
+                return Mob.CanSpeak;}
+            public void SetCanSpeak(boolean CanSpeak){
+                this.CanSpeak = CanSpeak;}
 
-    private String GetType(){
-        return Type;}
-    public void SetType(String Type){
-        this.Type = Type;}
+        public static String GetType(CharactersMobs Mob){
+            return Mob.Type;}
+        public void SetType(String Type){
+            this.Type = Type;}
 
-    private String GetTeam(){
-        return Team;}
-    public void SetTeam(String Team){
-        this.Team = Team;}
+        public static String GetTeam(CharactersMobs Mob){
+            return Mob.Team;}
+        public void SetTeam(String Team){
+            this.Team = Team;}
 
 
 }

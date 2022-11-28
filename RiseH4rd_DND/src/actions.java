@@ -1,16 +1,31 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class actions {
 
-    public void Punch( String PlayerName, ArrayList<String> PlayerConditions,ArrayList<String> PlayerAbilities,String PlayerItem,
-                       int PlayerAgility,int PlayerIntellect,int PlayerHealth,int PlayerStrength,int PlayerMagic,
+    public static void ActionDetector(CharactersMobs Mob){
+        System.out.println("Ваши действия?");
+        Scanner in = new Scanner(System.in);
+        String Input = in.nextLine();
+        String[] Word = Input.split(" ");
+        if (Word[0].equalsIgnoreCase("Бить")|Word[0].equalsIgnoreCase("Ударить")){
+            if (Word[1].equalsIgnoreCase(CharactersMobs.GetName(Mob))){
+                Punch(Mob);}
+        }
 
-                      String MobName, ArrayList<String> MobConditions,ArrayList<String> MobAbilities,String MobItem,
-                      int MobAgility,int MobIntellect,int MobHealth,int MobStrength,int MobMoral,int MobRespect,int MobRage,int MobMagic,
-                      boolean MobAlive, boolean MobCanSpeak)
+    }
+
+    public static void Punch(CharactersMobs Mob)
     {
+        EnternalBuffer Buffer = new EnternalBuffer();
         boolean hit = false; int damage;
-        if (PlayerItem != null) {System.out.println("вы замахиваетесь на "+MobName+" используя "+PlayerItem);}
+        String MobName = CharactersMobs.GetName(Mob);
+        int MobMoral = CharactersMobs.GetMoral(Mob);
+        int PlayerAgility = Buffer.PlayerAgility; int MobAgility = CharactersMobs.GetAgility(Mob);
+        int PlayerStrength = Buffer.PlayerStrength; int MobStrength = CharactersMobs.GetStrength(Mob);
+        int MobHealth = CharactersMobs.GetHealth(Mob);
+        int MobRage = CharactersMobs.GetRage(Mob); int MobRespect = CharactersMobs.GetRespect(Mob);
+        if (Buffer.Inventory.get(0) != null) {System.out.println("вы замахиваетесь на "+MobName+" используя "+Buffer.Inventory.get(0));}
         else {System.out.println("вы замахиваетесь на "+MobName+" Рукой");}
 
         if (MobMoral < 0) {System.out.println(MobName+" растерян! Все характиристики "+MobName+" Снижаются на "+Math.abs(MobMoral)+" !!!");}

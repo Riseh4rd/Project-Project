@@ -11,15 +11,13 @@ public class Situations {
     public static void PlayerAction(String[] Actual){
 
     }
-    public static void Situation1(){}
-    public static void Situation2(){}
     public static String[] Situation0(){
         CharactersMobs Person1 = NewMob.GiveMeMob();
         assert Person1 != null;
         String Name = CharactersMobs.GetName(Person1);
-           System.out.println("Вы выходите на центральную площадь города, перед вами открывается несколько путей !!!Replace me!!! вы за мечаете что на площади находится одинокий "+Name+"\n"
+           System.out.println("Вы выходите на центральную площадь города, перед вами открывается несколько путей !!!Replace me!!! вы замечаете, что на площади находится одинокий "+Name+"\n"
            +"Заметив вас, "+Name+" Осторожно подходит к вам");
-
+        actions.ActionDetector(Person1);
 
 
 
