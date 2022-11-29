@@ -11,7 +11,7 @@ public class EnternalBuffer {
     public static String PlayerTeam;
     public static ArrayList<String> PlayerConditions;
     public static ArrayList<String> PlayerAbilities;
-    public static ArrayList<String> Inventory;
+    public static ArrayList<String> Inventory; public static String PlayerWeapon,PlayerSecond,PlayerAccessory,PlayerArmor;
     public static int PlayerAgility =10 ,PlayerIntellect =10,PlayerHealth=20,PlayerStrength=10,PlayerMagic=0,PlayerLevel=0,PlayerCharisma=10;
     public static  boolean PlayerCanSpeak = true;
 
@@ -25,6 +25,11 @@ public class EnternalBuffer {
     public  ArrayList<String> getPlayerAbilities(){return PlayerAbilities;}     public void SetPlayerAbilities( ArrayList<String> Replace){PlayerAbilities = Replace;}
     public  ArrayList<String> getInventory(){return Inventory;}                 public static void SetInventory(ArrayList<String> Replace){Inventory = Replace;}
 
+    public  String getPlayerWeapon(){return PlayerWeapon;}                 public static void SetPlayerWeapon(String Replace){PlayerWeapon = Replace;}
+    public  String getPlayerSecond(){return PlayerSecond;}                 public static void SetPlayerSecond(String Replace){PlayerSecond = Replace;}
+    public  String getPlayerAccessory(){return PlayerAccessory;}           public static void SetPlayerAccessory(String Replace){PlayerAccessory = Replace;}
+    public  String getPlayerArmor(){return PlayerArmor;}                   public static void SetPlayerArmor(String Replace){PlayerArmor = Replace;}
+
     public int getPlayerAgility(){return PlayerAgility;}                        public void SetPlayerAgility(int Replace){PlayerAgility = Replace;}
     public int getPlayerIntellect(){return PlayerIntellect;}                    public void SetPlayerIntellect(int Replace){PlayerIntellect = Replace;}
     public int getPlayerHealth(){return PlayerHealth;}                          public void SetPlayerHealth(int Replace){PlayerHealth = Replace;}
@@ -34,4 +39,15 @@ public class EnternalBuffer {
     public int getPlayerCharisma(){return PlayerCharisma;}                      public void SetPlayerCharisma(int Replace){PlayerCharisma = Replace;}
 
     public boolean getPlayerCanSpeak(){return PlayerCanSpeak;}                  public void SetPlayerCanSpeak(boolean Replace){PlayerCanSpeak = Replace;}// Ќ≈ Ћќћј“№ ЅЋя“№ Ё“ќ!
+
+    // далее идут методы, которые по сути могли быть бы и не тут...
+
+    public static void LookInventory(){
+    System.out.print("\nЁкипированное оружие: ["+PlayerWeapon+"] ");
+    System.out.println("Ёкипированное вторичное: ["+PlayerSecond+"]  ");
+    System.out.print("Ёкипированный аксессуар: ["+PlayerAccessory+"]  ");
+    System.out.println("Ёкипированные доспехи: ["+PlayerArmor+"]  ");
+    System.out.print("\n»нвентарь "+Inventory.size()+"/"+PlayerStrength+" : ["+Inventory+"]");
+    }//ћетод используетс€ дл€ получени€ и вывода в консоль всей экипировки игрока.
+
 }

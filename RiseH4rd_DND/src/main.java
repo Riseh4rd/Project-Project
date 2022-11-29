@@ -19,8 +19,10 @@ public class main {
             else if (input.equalsIgnoreCase("Нет")){continue;}
             else {System.err.println("Ошибка ввода, расценивается как <Нет> ");continue;}
         }
+        utility.Hello();
         utility.ClearAll();
         BackStoryScenario.GiveMeStory(Buffer.PlayerName);
+       EnternalBuffer.LookInventory();
        System.out.println(); Situations.GiveMeSituation();
     }
 }
