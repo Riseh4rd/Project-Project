@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public class CharactersMobs {
-        private String Name,Type,Team;
+    public static CharactersMobs PersonA;
+    private String Name,Type,Team;
         private ArrayList<String> Conditions,Abilities;
         private int Agility,Intellect,Health,Strength,Moral,Respect,Rage,Magic,Level;
         private  boolean Alive,CanSpeak;
@@ -26,8 +27,8 @@ public class CharactersMobs {
 
         public static String GetName(CharactersMobs Mob){
              return Mob.Name;}
-        public void SetName(String Name){
-             this.Name = Name;}
+        public static void SetName(String Name,CharactersMobs Mob){
+            Mob.Name = Name;}
 
         public static ArrayList<String> GetCondition(CharactersMobs Mob){
                 return Mob.Conditions;}
@@ -51,8 +52,8 @@ public class CharactersMobs {
 
         public static int GetHealth(CharactersMobs Mob){
                 return Mob.Health;}
-            public void SetHealth(int Health){
-                this.Health = Health;}
+            public static void SetHealth(int Health, CharactersMobs Mob){
+                Mob.Health = Health;}
 
         public static int GetStrength(CharactersMobs Mob){
                 return Mob.Strength;}
@@ -86,8 +87,8 @@ public class CharactersMobs {
 
         public static boolean GetAlive(CharactersMobs Mob){
                 return Mob.Alive;}
-            public void SetAlive(boolean Alive){
-                this.Alive = Alive;}
+            public static void SetAlive(boolean Alive, CharactersMobs Mob){
+                Mob.Alive = Alive;}
 
         public static boolean GetCanSpeak(CharactersMobs Mob){
                 return Mob.CanSpeak;}

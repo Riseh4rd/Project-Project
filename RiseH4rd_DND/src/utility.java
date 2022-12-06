@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -48,23 +49,54 @@ public class utility {
 
         if (TypeRoll==0){System.out.println("Бросок на удачу! Успех - выбить число не меньше "+Bounds+" !");
           while (true){ try {input = in.nextInt();} catch (NumberFormatException e){System.out.println("Вы ввели хуйню, вводите снова.");continue;}if (input>Bounds){System.out.println("Вы ввели число, превышающее границы ("+Bounds+") !");continue;}break;}
-            result=(Rnd.nextInt((input/2))+Rnd.nextInt(Bounds));
+            result=(Rnd.nextInt(Math.abs(input/2))+Rnd.nextInt(Math.abs(Bounds)))+1;
           if (result>=Bounds){System.out.println("Успех! вы выбросили: "+result+" / "+Bounds);return true;}
           else {System.out.println("Неудача! вы выбросили: "+result+" / "+Bounds);return false;}
         }
-        else if (TypeRoll==1){ Bounds = Rnd.nextInt(7); System.out.println("Бросок на удачу! Успех - выбить число Кратное "+Bounds+" !");
+        else if (TypeRoll==1){ Bounds = Rnd.nextInt(5)+2; System.out.println("Бросок на удачу! Успех - выбить число Кратное "+Bounds+" !");
             while (true){ try {input = in.nextInt();} catch (NumberFormatException e){System.out.println("Вы ввели хуйню, вводите снова.");continue;}break;}
-            result=((input/2)+Rnd.nextInt(Bounds));
+            result=((input/2)+Rnd.nextInt(Bounds))+1;
             if (result%Bounds==0){System.out.println("Успех! вы выбросили: "+result+" , Кратное "+Bounds);return true;}
             else {System.out.println("Неудача! вы выбросили: "+result+" , не кратное "+Bounds);return false;}
         }
-        else {int Bounds2= Rnd.nextInt(7); System.out.println("Бросок на удачу! Успех - выбить число не меньше "+Bounds+" , или кратное "+Bounds2+" !");
+        else {int Bounds2= Rnd.nextInt(5)+2; System.out.println("Бросок на удачу! Успех - выбить число не меньше "+Bounds+" , или кратное "+Bounds2+" !");
             while (true){ try {input = in.nextInt();} catch (NumberFormatException e){System.out.println("Вы ввели хуйню, вводите снова.");continue;}if (input>Bounds){System.out.println("Вы ввели число, превышающее границы ("+Bounds+") !");continue;}break;}
-            result=(Rnd.nextInt((input/2)+1)+Rnd.nextInt(Bounds/2)+1);
+            result=(Rnd.nextInt((input/2)+1)+Rnd.nextInt(Bounds/2)+1)+1;
             if (result>=Bounds|result%Bounds2==0){System.out.println("Успех! вы выбросили: "+result+" / "+Bounds+" , или кратное "+Bounds2);return true;}
             else {System.out.println("Неудача! вы выбросили: "+result+" / "+Bounds+" , и не кратное "+Bounds2);return false;}
         }
 
         }//метод имитирующий бросание игральных костей
+
+    public static boolean FirstTurner(ArrayList<CharactersMobs> Mobs){
+        int PlayerAgility = 0,MobAgility=0;
+        CharactersMobs Mob = null;
+        for (int i = 0; i <Mobs.size() ; i++) {
+            if (CharactersMobs.GetAgility(Mobs.get(i))>=MobAgility){
+                MobAgility=CharactersMobs.GetAgility(Mobs.get(i));
+                Mob = Mobs.get(i);
+            }
+
+        }
+
+      if (PlayerAgility>=MobAgility){actions.ActionDetector(Mobs);return true;}
+      else {MobActions.MobActionChoiser(Mobs);return false;}
+    }//Определяет за кем будет первый ход при встрече
+
+    public static void CheckDeath(CharactersMobs Mob){
+
+       if (CharactersMobs.GetHealth(Mob) <= 0){
+           CharactersMobs.SetAlive(false,Mob);
+       }
+    }//метод имитирующий бросание игральных костей
+
+    public static boolean FindByName(String InputName,ArrayList<CharactersMobs> Mobs){
+        boolean Found = false;
+        for (CharactersMobs mob : Mobs) {
+            if (InputName.equalsIgnoreCase(CharactersMobs.GetName(mob))) {CharactersMobs.PersonA = mob;Found=true;break;}
+        }
+        if (!Found) System.out.println(InputName + " тут нет");
+        return Found;
+    }
 }
 

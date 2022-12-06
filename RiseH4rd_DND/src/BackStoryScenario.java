@@ -10,8 +10,8 @@ public class BackStoryScenario {
         Random RND = new Random();
         String Class = StartClass[RND.nextInt(StartClass.length)];
         ArrayList<String> Inventory = new ArrayList<>(){};
-        if (Class.equals("Ã‡„"))    {Inventory.add(0,ItemsList.GiveMeWand());   EnternalBuffer.SetInventory(Inventory); EnternalBuffer.SetPlayerWeapon(ItemsList.GiveMeWand());    }
-        if (Class.equals("¬ÓËÌ"))   {Inventory.add(0,ItemsList.GiveMeMelee());  EnternalBuffer.SetInventory(Inventory); EnternalBuffer.SetPlayerWeapon(ItemsList.GiveMeMelee());    }
+        if (Class.equals("Ã‡„"))    {EnternalBuffer.SetInventory(Inventory); EnternalBuffer.SetPlayerWeapon(ItemsList.GiveMeWand());    }
+        if (Class.equals("¬ÓËÌ"))   {EnternalBuffer.SetInventory(Inventory); EnternalBuffer.SetPlayerWeapon(ItemsList.GiveMeMelee());    }
 
         return Class;
     }
@@ -22,7 +22,6 @@ public class BackStoryScenario {
        if (StoryNumber==1){BackStory1(Name);}
     }
     public static void BackStory1(String PlayerName){
-        EnternalBuffer.SetPlayerTeam("PlayerTeam");EnternalBuffer.SetPlayerTeam("PlayerTeam");
         EnternalBuffer.SetPlayerName(PlayerName);
 
         String Year = "ıÛ∏-ÏÓ∏ œŒÃ≈Õﬂ“‹ ›“Œ!";

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Situations {
@@ -7,26 +8,27 @@ public class Situations {
         int StoryNuber = RND.nextInt(1);
         if (StoryNuber==0){Situation0();}
     }
+    public static void Situation0(){
+        boolean MobTurn,Ended=false;
+        ArrayList<CharactersMobs> Persons = new ArrayList<>();
+        for (int i = 0; i < 2; i++) {
+            assert false;
+            Persons.add(NewMob.GiveMeMob());
+            CharactersMobs.SetName(CharactersMobs.GetName(Persons.get(i))+" "+utility.character_New_Name(),Persons.get(i));
+            }
 
-    public static void PlayerAction(String[] Actual){
-
-    }
-    public static String[] Situation0(){
-        CharactersMobs Person1 = NewMob.GiveMeMob();
-        assert Person1 != null;
-        String Name = CharactersMobs.GetName(Person1);
-           System.out.println("¬ы выходите на центральную площадь города, перед вами открываетс€ несколько путей !!!Replace me!!! вы замечаете, что на площади находитс€ одинокий "+Name+"\n"
-           +"«аметив вас, "+Name+" ќсторожно подходит к вам");
-        actions.ActionDetector(Person1);
-
+           System.out.println("¬ы выходите на центральную площадь города, перед вами открываетс€ несколько путей: !!!Replace me!!! вы замечаете, что на площади находитс€ одинокий "+CharactersMobs.GetName(Persons.get(0))+" и "+CharactersMobs.GetName(Persons.get(1))+"\n");
 
 
 
-
-
-        return new String[]{};
-
-
-    }//—итуаци€ с площадью и одиноким существом
+            MobTurn=utility.FirstTurner(Persons);
+        while (!Ended){
+            if (!MobTurn){
+                actions.ActionDetector(Persons);
+                MobTurn=true;
+            }
+            else {MobActions.MobActionChoiser(Persons);MobTurn=false;}
+        }
+    }//—итуаци€ с площадью и двум€ существами
     }
 
