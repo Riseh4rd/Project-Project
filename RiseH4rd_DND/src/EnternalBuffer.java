@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class EnternalBuffer {
 
     public static String PlayerName;
-    public static String PlayerTeam="Ваша Команда";
+    public static String PlayerTeam="Соратник";
     public static ArrayList<String> PlayerConditions;
     public static ArrayList<String> PlayerAbilities;
     public static ArrayList<String> Inventory; public static String PlayerWeapon,PlayerSecond,PlayerAccessory,PlayerArmor;

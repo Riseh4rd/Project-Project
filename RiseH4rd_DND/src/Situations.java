@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Situations {
+    public static final String a2 = "\033[0m";  // Text Reset
+    public static final String a1 = "\033[0;97m";  // WHITE
 
     public static void GiveMeSituation (){
         Random RND = new Random();
@@ -12,12 +14,11 @@ public class Situations {
         boolean MobTurn,Ended=false;
         ArrayList<CharactersMobs> Persons = new ArrayList<>();
         for (int i = 0; i < 2; i++) {
-            assert false;
             Persons.add(NewMob.GiveMeMob());
-            CharactersMobs.SetName(CharactersMobs.GetName(Persons.get(i))+" "+utility.character_New_Name(),Persons.get(i));
+
             }
 
-           System.out.println("Вы выходите на центральную площадь города, перед вами открывается несколько путей: !!!Replace me!!! вы замечаете, что на площади находится одинокий "+CharactersMobs.GetName(Persons.get(0))+" и "+CharactersMobs.GetName(Persons.get(1))+"\n");
+           System.out.println("Вы выходите на центральную площадь города, перед вами открывается несколько путей: !!!Replace me!!! вы замечаете, что на площади находится одинокий "+a1+CharactersMobs.GetName(Persons.get(0))+a2+" и "+a1+CharactersMobs.GetName(Persons.get(1))+a2+"\n");
 
 
 

@@ -22,12 +22,39 @@ public class utility {
        System.out.println(" \n ".repeat(100));
         }//очистка консоли хуйнёй
     public static String character_New_Name(){
-        String[] Slog = new String[]{"Гит","Бар","Нок","Шу","Й","Ра","Чо","Чи","Че","Ча","Лер","Ляр","Со","Си","Су","Ум","Рут",""," ","","","Мур","Ша","де","зо","за","зи"
+        String Slog1=null,Slog2=null,Slog3=null;
+        String[] NormalSecond = new String[]{"Русский","белый","Чёрный","старый","недалекий","великий","красный","страшный","мятый","Мерзкий","мятный","Вонючий",
+        "святой","чмо","золотой","холодный","Горячий","левый","Правый","тонкий","толстый","мелкий","Здоровый","тихий","Громкий","теплый"};
+        String[] NormalName = new String[]{"Глеб","Дмитрий","Всеволод","Степан","Егор","Лев","Марат","Александр","Владислав","Платон","Мирон","Тимофей","Артём","Сергей",
+                "Илья","Кирилл","Максим","Семён","Захар","Иван","Билал","Тимур","Денис","Михаил","Никита","Григорий","Артемий","Алексей","Константин","Эйбрахам","Адам",
+                "Эйдриан","Алан","Эндрю","Энтони","Остин","Бэзил","Бенджамин","Бернард","Брейэн","Брус","Брюс","Картер","Чарлз","Кристиан","Кристофер","Клиффорд",
+                "Кертис","Сайрус","Дейвид","Деннис","Доналд","Эдвард","Джеффри","Джордж","Джералд","Гилберт","Гордон","Грейам","Грегори","Харолд","Хенри","Херберт",
+                "Хауард","Джек","Кит","Мартин","Морис","Майкл","МайлзНорман"};
+        String[] Beliberda = new String[]{"Гит","Бар","Нок","Шу","Й","Ра","Чо","Чи","Че","Ча","Лер","Ляр","Со","Си","Су","Ум","Рут","Мур","Ша","де","зо","за","зи"
                 ,"Ро","Ри","Ра","Виль","Зе","Вур","Ба","Бо","Би","Бе","Бэ","а","и","о","у","е","ю","я","ё","ху","хи","ха","Еб","Ёб","Дал","Дол","лал","лог","Хмы","рь"
-                ,"рю","Ад","ол","ль","фа","чур","бес","ка","шай","тан","-","уй","Пи","до","рас","ал","ан","он","су","Мра","го","вно"," Александр "," Иван "," Дмитрий "," Михаил "," Святослав "
-                ," Ярик"," Макс"," Горшок "," кривой ","-","-"};
+                ,"рю","Ад","ол","ль","фа","чур","бес","ка","шай","тан","уй","Пи","до","рас","ал","ан","он","су","Мра","го","вно"};
         Random RND = new Random();
-        String Name = Slog[RND.nextInt(Slog.length)]+Slog[RND.nextInt(Slog.length)]+Slog[RND.nextInt(Slog.length)];
+
+        int typer = RND.nextInt(5);
+        int type = RND.nextInt(3);
+        if (typer>=0){
+          type = RND.nextInt(4);
+        if (type==0){Slog1=Beliberda[RND.nextInt(Beliberda.length)]+Beliberda[RND.nextInt(Beliberda.length)]+Beliberda[RND.nextInt(Beliberda.length)];}
+        if (type==1){Slog1=NormalName[RND.nextInt(NormalName.length)];}
+        if (type==2){Slog1=NormalSecond[RND.nextInt(NormalSecond.length)];}
+        if (type==3){Slog1=Beliberda[RND.nextInt(Beliberda.length)]+Beliberda[RND.nextInt(Beliberda.length)];}}
+
+        if (typer>=2){
+         type = RND.nextInt(2);
+        if (type==0){Slog2=" "+Beliberda[RND.nextInt(Beliberda.length)]+Beliberda[RND.nextInt(Beliberda.length)]+Beliberda[RND.nextInt(Beliberda.length)];}
+        if (type==1){Slog2=" "+NormalName[RND.nextInt(NormalName.length)];}}else {Slog2="";}
+
+        if (typer==4){
+         type = RND.nextInt(2);
+        if (type==0){Slog3=" "+Beliberda[RND.nextInt(Beliberda.length)]+Beliberda[RND.nextInt(Beliberda.length)]+Beliberda[RND.nextInt(Beliberda.length)];}
+        if (type==1){Slog3=" "+NormalSecond[RND.nextInt(NormalSecond.length)];}}else {Slog3="";}
+
+        String Name = Slog1+Slog2+Slog3;
         return Name;}//Метод для создания различных имен персонажей, имя составляется случайно из содержимого массивов
     public static String Town_New_Name(String NameToBuild){
         String[] Slog1 = new String[]{"Вурн","Шапе","Зоро","Каля","Гото","Бум","Рак","Ред","Блу","Пере","Пре","Грин","Сизо","Парс","Чоко","Пирс","Нами","Луфи","Усоп","Санж","Де-","Ля-","Гав-","Пакль",
@@ -97,6 +124,10 @@ public class utility {
         }
         if (!Found) System.out.println(InputName + " тут нет");
         return Found;
+    }
+
+    public static boolean UniqueName(String InputName,ArrayList<CharactersMobs> Mobs){
+       
     }
 }
 
