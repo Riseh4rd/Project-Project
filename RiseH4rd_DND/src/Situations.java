@@ -12,13 +12,16 @@ public class Situations {
     }
     public static void Situation0(){
         boolean MobTurn,Ended=false;
+        String Mob1,Mob2;
         ArrayList<CharactersMobs> Persons = new ArrayList<>();
         for (int i = 0; i < 2; i++) {
             Persons.add(NewMob.GiveMeMob());
-
             }
+        CharactersMobs.OccupyIndex(Persons.get(0));CharactersMobs.OccupyIndex(Persons.get(1));
+        Mob1 =(a1+CharactersMobs.GetName(Persons.get(0))+"("+CharactersMobs.GetIdIndex(Persons.get(0))+")"+a2);
+        Mob2 =(a1+CharactersMobs.GetName(Persons.get(1))+"("+CharactersMobs.GetIdIndex(Persons.get(1))+")"+a2);
 
-           System.out.println("Вы выходите на центральную площадь города, перед вами открывается несколько путей: !!!Replace me!!! вы замечаете, что на площади находится одинокий "+a1+CharactersMobs.GetName(Persons.get(0))+a2+" и "+a1+CharactersMobs.GetName(Persons.get(1))+a2+"\n");
+                System.out.println("Вы выходите на центральную площадь города, перед вами открывается несколько путей: !!!Replace me!!! вы замечаете, что на площади находится одинокий "+Mob1+" и "+Mob2+"\n");
 
 
 

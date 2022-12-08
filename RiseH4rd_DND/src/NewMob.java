@@ -6,7 +6,7 @@ public class NewMob {
     public static CharactersMobs GiveMeMob(){
         Random RND = new Random();
         int MobsNuber = RND.nextInt(1)+1;
-        if (MobsNuber==1){CharactersMobs Mouse = Mouse();return Mouse;}
+        if (MobsNuber==1){return Mouse();}
         else {return null;}
     }
 
@@ -21,6 +21,6 @@ public class NewMob {
         ArrayList<String> Condition = new ArrayList<>();
         ArrayList<String> Ability = new ArrayList<>();
         Condition.add("Маленький");Ability.add("Живое");
-        return CreateNewMob("Mouser",null,"Мышка",Condition,Ability,10,1,5,1,0,2,0,0,true,false);
+        return CreateNewMob("Mouse",null,"Мышка",Condition,Ability,10,1,5,1,0,2,0,0,true,false);
     }
 }

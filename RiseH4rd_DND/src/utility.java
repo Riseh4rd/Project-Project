@@ -19,7 +19,7 @@ public class utility {
 
     }//метод просто выводит в консоль подсказки дл€ пользовател€.
     public static void ClearAll(){
-       System.out.println(" \n ".repeat(100));
+       System.out.println(" \n ".repeat(30));
         }//очистка консоли хуйнЄй
     public static String character_New_Name(){
         String Slog1=null,Slog2=null,Slog3=null;
@@ -113,9 +113,9 @@ public class utility {
     public static void CheckDeath(CharactersMobs Mob){
 
        if (CharactersMobs.GetHealth(Mob) <= 0){
-           CharactersMobs.SetAlive(false,Mob);
+           CharactersMobs.SetAlive(false,Mob);CharactersMobs.ReleaseIndex(Mob);
        }
-    }//метод имитирующий бросание игральных костей
+    }//ѕроверка существа на жизнеспособность и дальнейшие действи€
 
     public static boolean FindByName(String InputName,ArrayList<CharactersMobs> Mobs){
         boolean Found = false;
@@ -124,10 +124,7 @@ public class utility {
         }
         if (!Found) System.out.println(InputName + " тут нет");
         return Found;
-    }
+    }//рудимент?
 
-    public static boolean UniqueName(String InputName,ArrayList<CharactersMobs> Mobs){
-       
-    }
 }
 
