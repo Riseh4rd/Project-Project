@@ -12,7 +12,7 @@ public class EnternalBuffer {
     public static ArrayList<String> PlayerConditions;
     public static ArrayList<String> PlayerAbilities;
     public static ArrayList<String> Inventory; public static String PlayerWeapon,PlayerSecond,PlayerAccessory,PlayerArmor;
-    public static int PlayerAgility =8 ,PlayerIntellect =8,PlayerHealth=20,PlayerMAXHealth=20,PlayerStrength=8,PlayerMagic=0,PlayerCharisma=5,PlayerFullLevel=0,PlayerLevel= 0;
+    public static int PlayerAgility =8 ,PlayerIntellect =8,PlayerHealth=100,PlayerMAXHealth=100,PlayerStrength=8,PlayerMagic=0,PlayerCharisma=5,PlayerFullLevel=0,PlayerLevel= 0;
     public static  boolean PlayerCanSpeak = true;
 
     // Далее идут геттеры и сеттеры для этого класса блядского.

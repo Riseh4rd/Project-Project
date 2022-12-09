@@ -5,8 +5,9 @@ public class NewMob {
 
     public static CharactersMobs GiveMeMob(){
         Random RND = new Random();
-        int MobsNuber = RND.nextInt(1)+1;
-        if (MobsNuber==1){return Mouse();}
+        int MobsNuber = RND.nextInt(2);
+        if (MobsNuber==0){return Mouse();}
+        if (MobsNuber==1){return Cat();}
         else {return null;}
     }
 
@@ -22,5 +23,11 @@ public class NewMob {
         ArrayList<String> Ability = new ArrayList<>();
         Condition.add("Маленький");Ability.add("Живое");
         return CreateNewMob(TCA.SmallAnimal,null,"Мышка",Condition,Ability,10,1,5,1,0,2,0,0,true,false);
+    }
+    public static CharactersMobs Cat () {
+        ArrayList<String> Condition = new ArrayList<>();
+        ArrayList<String> Ability = new ArrayList<>();
+        Condition.add("Маленький");Ability.add("Живое");
+        return CreateNewMob(TCA.SmallAnimal,null,"Кот",Condition,Ability,11,2,10,2,1,0,1,0,true,false);
     }
 }
