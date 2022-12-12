@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 public class main {
     static EnternalBuffer Buffer = new EnternalBuffer();
-    public static void main(String[] args) {
+    static void PlayerName() {
         System.out.println("".repeat(3));
         System.out.print("Здравствуйте, игрок!");
         while (true) {
@@ -18,7 +18,9 @@ public class main {
                 try {Thread.sleep(1000);} catch (InterruptedException e) {throw new RuntimeException(e);}break;}
             else if (input.equalsIgnoreCase("Нет")){continue;}
             else {System.err.println("Ошибка ввода, расценивается как <Нет> ");continue;}
-        }
+        }}
+    public static void main(String[] args) {
+        PlayerName();
         CharactersMobs.MobsIdIndex.add(-1);
         utility.Hello();
         utility.ClearAll();

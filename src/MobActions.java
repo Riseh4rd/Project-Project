@@ -3,10 +3,11 @@ import java.util.Random;
 
 public class MobActions {
 
-
-    public static void MobActionChoiser(ArrayList<CharactersMobs> Mobs){
+    public static void PickRandomMob(ArrayList<CharactersMobs> Mobs){
         Random RND = new Random();
-        CharactersMobs Mob =Mobs.get(RND.nextInt(Mobs.size()));
+        MobActionChoiser(Mobs.get(RND.nextInt(Mobs.size())));
+    }
+    public static void MobActionChoiser(CharactersMobs Mob){
         String Type=CharactersMobs.GetType(Mob);
         if (Type.equals(TCA.SmallAnimal)){SmlAMAL(Mob);}
     }//Метод выбирает случайного моба из списка сцены и дает ему действие

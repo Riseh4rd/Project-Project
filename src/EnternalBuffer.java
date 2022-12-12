@@ -30,14 +30,14 @@ public class EnternalBuffer {
     public  String getPlayerAccessory(){return PlayerAccessory;}                public static void SetPlayerAccessory(String Replace){PlayerAccessory = Replace;}
     public  String getPlayerArmor(){return PlayerArmor;}                        public static void SetPlayerArmor(String Replace){PlayerArmor = Replace;}
 
-    public static int getPlayerAgility(){return PlayerAgility;}                 public void SetPlayerAgility(int Replace){PlayerAgility = Replace;}
-    public int getPlayerIntellect(){return PlayerIntellect;}                    public void SetPlayerIntellect(int Replace){PlayerIntellect = Replace;}
-    public int getPlayerHealth(){return PlayerHealth;}                          public void SetPlayerHealth(int Replace){PlayerHealth = Replace;}
-    public int getPlayerMAXHealth(){return PlayerMAXHealth;}                    public void SetPlayerMAXHealth(int Replace){PlayerMAXHealth = Replace;}
-    public int getPlayerMagic(){return PlayerMagic;}                            public void SetPlayerMagic(int Replace){PlayerMagic = Replace;}
-    public int getPlayerStrength(){return PlayerStrength;}                      public void SetPlayerStrength(int Replace){PlayerStrength = Replace;}
+    public static int getPlayerAgility(){return PlayerAgility;}                 public static void SetPlayerAgility(int Replace){PlayerAgility = Replace;}
+    public int getPlayerIntellect(){return PlayerIntellect;}                    public static void SetPlayerIntellect(int Replace){PlayerIntellect = Replace;}
+    public int getPlayerHealth(){return PlayerHealth;}                          public static void SetPlayerHealth(int Replace){PlayerHealth = Replace;}
+    public int getPlayerMAXHealth(){return PlayerMAXHealth;}                    public static void SetPlayerMAXHealth(int Replace){PlayerMAXHealth = Replace;}
+    public int getPlayerMagic(){return PlayerMagic;}                            public static void SetPlayerMagic(int Replace){PlayerMagic = Replace;}
+    public int getPlayerStrength(){return PlayerStrength;}                      public static void SetPlayerStrength(int Replace){PlayerStrength = Replace;}
     public int getPlayerLevel(){return PlayerLevel;}                            public void SetPlayerLevel(int Replace){PlayerLevel = Replace;}
-    public int getPlayerCharisma(){return PlayerCharisma;}                      public void SetPlayerCharisma(int Replace){PlayerCharisma = Replace;}
+    public int getPlayerCharisma(){return PlayerCharisma;}                      public static void SetPlayerCharisma(int Replace){PlayerCharisma = Replace;}
     public int getPlayerFullLevel(){return PlayerFullLevel;}                    public void SetPlayerFullLevel(int Replace){PlayerFullLevel = Replace;}
 
     public boolean getPlayerCanSpeak(){return PlayerCanSpeak;}                  public void SetPlayerCanSpeak(boolean Replace){PlayerCanSpeak = Replace;}// Ќ≈ Ћќћј“№ ЅЋя“№ Ё“ќ!
@@ -62,4 +62,9 @@ public class EnternalBuffer {
     System.out.println("\n".repeat(2));
     }//ћетод используетс€ дл€ вывода в консоль всей »нформации об игроке.
 
+    public static void SetPlayerStats(int Strength,int Agility,int Intellect, int Magic,int Charisma, int Health){
+        SetPlayerAgility(Agility);  SetPlayerStrength(Strength);    SetPlayerIntellect(Intellect);
+        SetPlayerMagic(Magic);      SetPlayerCharisma(Charisma);    SetPlayerHealth(Health);
+                                                                    SetPlayerMAXHealth(Health);
+    }
 }

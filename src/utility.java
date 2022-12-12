@@ -107,7 +107,7 @@ public class utility {
         }
 
       if (PlayerAgility>=MobAgility){actions.ActionDetector(Mobs);return true;}
-      else {MobActions.MobActionChoiser(Mobs);return false;}
+      else {MobActions.PickRandomMob(Mobs);return false;}
     }//Определяет за кем будет первый ход при встрече
 
     public static void CheckDeath(CharactersMobs Mob){

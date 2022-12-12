@@ -28,7 +28,7 @@ public class Situations {
                 actions.ActionDetector(Persons);
                 MobTurn=true;
             }
-            else {MobActions.MobActionChoiser(Persons);MobTurn=false;}
+            else {MobActions.PickRandomMob(Persons);MobTurn=false;}
         }
     }//Ситуация с площадью и двумя существами
     }

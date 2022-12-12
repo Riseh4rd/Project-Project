@@ -10,8 +10,8 @@ public class BackStoryScenario {
         Random RND = new Random();
         String Class = StartClass[RND.nextInt(StartClass.length)];
         ArrayList<String> Inventory = new ArrayList<>(){};
-        if (Class.equals("Маг"))    {EnternalBuffer.SetInventory(Inventory); EnternalBuffer.SetPlayerWeapon(ItemsList.GiveMeWand());    }
-        if (Class.equals("Воин"))   {EnternalBuffer.SetInventory(Inventory); EnternalBuffer.SetPlayerWeapon(ItemsList.GiveMeMelee());    }
+        if (Class.equals("Маг"))    {EnternalBuffer.SetInventory(Inventory); EnternalBuffer.SetPlayerWeapon(ItemsList.GiveMeWand());EnternalBuffer.SetPlayerStats(5,5,10,1,5,100);}
+        if (Class.equals("Воин"))   {EnternalBuffer.SetInventory(Inventory); EnternalBuffer.SetPlayerWeapon(ItemsList.GiveMeMelee());EnternalBuffer.SetPlayerStats(10,8,5,0,6,120);}
 
         return Class;
     }
